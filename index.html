@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Animation Project</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/0b4300e3e5.js" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <!-- NAVIGATION MENU-->
+    <div class="nav-flex">
+      <div class="logo">
+        <img id="web-logo" src="images/temp-logo.png" alt="Logo of the website" </div>
+        <div class="navigation">
+          <nav id="menu">
+            <h2 class="hidden">Header Navigation Menu</h2>
+            <i id="mob-exit" class="far fa-times-circle"></i>
+            <ul>
+              <li><a href="#">about</a></li>
+              <li><a href="#features-section">portfolio</a></li>
+              <li><a href="#contact-section">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+      <!-- HAMBURGER MENU IMAGE-->
+      <div class="hamburger">
+        <i id="ham-btn-cta" class="fas fa-bars"></i>
+      </div>
+
+  </header>
+  <!-- STARTING INSTRUCTIONS PAGE-->
+  <section id="start-page">
+    <div class="start-discription">
+      <h1> Welcome to the Dragon Ball Z Fight Scene</h1>
+      <p>This is a short semi-interactive game based on the famous Anime cartoon Dragon Ball Z. It is themed on a short fight scene between Frieza, Vegeta and Goku(Kakarot). Frieza was defeated by Goku before but he has come back trying to boast his
+        new next level Golden form and ready to take on a revenge. Vegeta and Goku are the only Saiyans left from their race as their planet was destroyed by Frieza with a SuperNova long time ago. Frieza is now on a mission to wipe out planet earth.
+        Goku has
+        recently recovered from a fight and is getting ready to get back to his full potential.</p>
+      <h3>Game Instructions</h3>
+      <p>The game consists of two scenes, The Starting Dialogue Scene and the Main Scene. Keep on clicking on the <span>"Start Scene"</span> button gently to activate each dailogue at a time on each click. The <span>"Main Scene"</span> will follow
+        right after the <span>"Start Scene".</span> There is no ending for it yet, but stay tuned as it is a work in progress!</p>
+      <div class="btn-start">
+        <button id="start-game-btn" type="button" name="button">Start Game</button>
+      </div>
+    </div>
+  </section>
+  <!-- FIRST SCENE AND SECOND SCENE SECTION PAGE-->
+  <section id="main-section">
+    <h2 class="hidden">Dragon Ball Main Battle Ground</h2>
+    <!-- DRAGON BALL LOGO -->
+    <img class="img" src="images/dragon-logo.png" alt="Iconic Dragon Ball Z logo">
+    <!-- FIRST SCENE AND SECOND SCENE BACKGROUNF IMAGE SWITCHED DYNAMICALLYWITH JS-->
+    <div class="background-img"></div>
+    <!-- BUTTON FOR TRIGGERS-->
+    <div class="btn-fight">
+      <button class="btn" id="btn0" type="button" name="button">Play/Pause Sound</button>
+      <button class="btn" id="btn1" type="button" name="button">Start Scene</button>
+      <button class="btn" id="btn2" type="button" name="button">Punch</button>
+      <button class="btn" id="btn3" type="button" name="button">Fire up</button>
+      <button class="btn" id="btn4" type="button" name="button">Kick</button>
+      <button class="btn" id="btn5" type="button" name="button">Throw Fire Ball</button>
+      <button class="btn" id="btn7" type="button" name="button">Restart Game</button>
+    </div>
+    <!-- MAIN CHARACTER SPRITE IMAGE DIV-->
+    <div id="frieza"></div>
+    <div id="vegeta"></div>
+    <div id="goku"></div>
+    <!-- CHARACTER DIALOGUE AND DIALOGUE IMAGE BOXES-->
+    <img id="vegeta-dial-img" src="images/vegeta-dialogue-image.png" alt="image of vegeta">
+    <img class="vegeta-dialbox" src="images/vegeta-dial-1.png" alt="dialogue box of vegeta">
+    <img id="frieza-dial-img" src="images/frieza-dial-img.png" alt="image of frieza">
+    <img class="frieza-dialbox" src="images/frieza-dial-1.png" alt="dialogue box of vegeta">
+    <img id="goku-dial-img" src="images/goku-dial-img.png" alt="image of goku">
+    <img class="goku-dialbox" src="images/goku-dial-1.png" alt="dialogue box of goku">
+    <!-- FRIEZA SPIRIT BALL FOR SCALING ANIMATION-->
+    <img class="sprite-ball" src="images/frieza-sprite-ball.png" alt="Frieza's spirit ball">
+    <!-- GOKU SPIRTE IMAGE OF FIRE UP-->
+    <div id="goku-kamey-flame"></div>
+    <!-- FLAMES IMAGE FOR VEGETA-->
+    <img class="vegeta-flame" src="images/vegeta-flame.png" alt="flame engulfing vegeta">
+    <!-- ASTROID IMAGE-->
+    <img id="astroid" src="images/astroid.png" alt="image od astroid broken into pieces">
+    <!-- CLOUND IMAGES-->
+    <img id="cloud1" src="images/clouds.png" alt=" one out of many  clouds">
+    <img id="cloud2" src="images/clouds.png" alt="one out of many  clouds">
+    <img id="cloud3" src="images/clouds.png" alt="one out of many  clouds">
+    <img id="cloud4" src="images/clouds.png" alt="one out of many  clouds">
+    <img id="cloud5" src="images/clouds.png" alt="one out of many  clouds">
+    <img id="cloud6" src="images/clouds.png" alt="one out of many  clouds">
+    <img id="cloud7" src="images/clouds.png" alt="one out of many  clouds">
+    <img id="cloud8" src="images/clouds.png" alt="one out of many  clouds">
+    <div id="clouds1"></div>
+    <!-- THUNDER SPRITE-->
+    <div id="thunder1"></div>
+    <div id="thunder2"></div>
+    <!-- POP UP TO RE-CONFIRM RESTART GAME-->
+    <div id="restart-game">
+      <h4>Are you sure you want to restart game?</h4>
+      <button id="yes-exit-btn" type="button" name="button">Yes</button>
+      <button id="no-exit-btn" type="button" name="button">No</button>
+    </div>
+    <!-- AUDIO FOR CHARACTER AND BACKGOUND MUSIC-->
+    <audio class="hidden" id="freiza-voice">
+      <source src="audio/frieza-curse.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="hidden" id="main-scene-sound">
+      <source src="audio/main-scene-audio.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+  <!-- FOOTER-->
+  <footer id="footer">
+    <div class="nav-flex">
+      <div class="copyright">
+        &copy;Copyright, Neil Moras@2021
+      </div>
+      <nav class="menu-footer">
+        <h2 class="hidden">Footer Navigation Menu</h2>
+        <ul>
+          <li><a href="#">about</a></li>
+          <li><a href="#features-section">portfolio</a></li>
+          <li><a href="#contact-section">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>
