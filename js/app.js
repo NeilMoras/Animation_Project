@@ -243,15 +243,15 @@ function load() {
     thunder2.classList.add("thunder2-launch");
     secondSceneSound.play();
     secondSceneSound.loop = "true;"
-    frieza.style.backgroundImage = "url('../images/frieza-sprite2-final.png')";
+    frieza.style.backgroundImage = "url('../frieza-sprite2-final.png')";
     frieza.classList.add("frieza-fire-launch");
     friezaSpriteBall.classList.add("frieza-fire-ball");
-    vegeta.style.backgroundImage = "url('../images/vegeta-small.png')";
+    vegeta.style.backgroundImage = "url('../vegeta-small.png')";
     vegeta.classList.add("vegeta-flame-launch");
     vegeta.style.opacity = 1;
     vegetaFlame.classList.add("vegeta-flame-fire");
     vegetaFlame.style.opacity = 3;
-    goku.style.backgroundImage = "url('../images/goku-1.png')";
+    goku.style.backgroundImage = "url('../goku-1.png')";
     goku.classList.add("goku-second-scene-launch");
     astroid.classList.add("astroid-launch");
     astroid.style.opacity = 10;
@@ -265,10 +265,10 @@ function load() {
   function punch() {
 
     goku.classList.remove("goku-second-scene-launch");
-    goku.style.backgroundImage = "url('../images/goku-punch2.png')";
+    goku.style.backgroundImage = "url('../goku-punch2.png')";
     goku.classList.add("goku-punch-launch")
     setTimeout(function() {
-      goku.style.backgroundImage = "url('../images/goku-1.png')";
+      goku.style.backgroundImage = "url('../goku-1.png')";
       goku.classList.remove("goku-punch-launch")
       goku.classList.add("goku-second-scene-launch");
 
@@ -281,10 +281,10 @@ function load() {
 
   function powerUp() {
     goku.classList.remove("goku-second-scene-launch");
-    goku.style.backgroundImage = "url('../images/goku-fire-btn.png')";
+    goku.style.backgroundImage = "url('../goku-fire-btn.png')";
     goku.classList.add("goku-level-up-launch")
     setTimeout(function() {
-      goku.style.backgroundImage = "url('../images/goku-1.png')";
+      goku.style.backgroundImage = "url('../goku-1.png')";
       goku.classList.remove("goku-level-up-launch")
       goku.classList.add("goku-second-scene-launch");
     }, 4000)
@@ -297,11 +297,11 @@ function load() {
 
   function kick() {
     goku.classList.remove("goku-second-scene-launch");
-    goku.style.backgroundImage = "url('../images/goku-kick-btn.png')";
+    goku.style.backgroundImage = "url('../goku-kick-btn.png')";
     goku.classList.add("goku-kick-launch")
 
     setTimeout(function() {
-      goku.style.backgroundImage = "url('../images/goku-1.png')";
+      goku.style.backgroundImage = "url('../goku-1.png')";
       goku.classList.remove("goku-kick-launch")
       goku.classList.add("goku-second-scene-launch");
     }, 500)
@@ -313,12 +313,12 @@ function load() {
   //--BACKGROUNG IMAGE URL CONTAINS THE FILE PATH FOR OFFLINE VIEWING, IF USING TEXT EDITOR LIVE SERVER THEN USE  JUST THE FOLLOWIMG  EXAMPLE PATH "url('../images/goku-1.png')"; --------------------------->
   function kamehamey() {
     goku.classList.remove("goku-second-scene-launch");
-    goku.style.backgroundImage = "url('../images/goku-kame-sprite.png')";
+    goku.style.backgroundImage = "url('../goku-kame-sprite.png')";
     goku.classList.add("goku-kamey-launch");
     gokuFlame.classList.add("goku-kamey-flame-launch");
 
     setTimeout(function() {
-      goku.style.backgroundImage = "url('../images/goku-1.png')";
+      goku.style.backgroundImage = "url('../goku-1.png')";
       gokuFlame.classList.remove("goku-kamey-flame-launch");
       goku.classList.remove("goku-kamey-launch")
       goku.classList.add("goku-second-scene-launch");
